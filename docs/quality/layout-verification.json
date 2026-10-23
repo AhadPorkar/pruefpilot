@@ -1,0 +1,337 @@
+{
+  "method": "Chromium page.set_content with built application render functions; navigation blocked by environment policy, so this is layout QA, not browser E2E.",
+  "checks": [
+    {
+      "view": "overview-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "asset-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "asset-de-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "overview-en-dark",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "assets-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "actions-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "reports-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "login-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "actions-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "asset-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "templates-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "schedules-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "overview-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "audit-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "assets-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "reports-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "inspections-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "login-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "team-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "help-en-light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "actions-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "asset-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "templates-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "schedules-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "overview-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "audit-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "assets-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "reports-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "inspections-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "login-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "team-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "help-en-light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "view": "actions-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "asset-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "templates-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "schedules-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "overview-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "audit-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "assets-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "reports-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "inspections-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "login-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "team-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "help-en-light",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "view": "actions-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "asset-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "templates-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "schedules-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "overview-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "audit-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "assets-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "reports-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "inspections-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "login-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "team-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "help-en-light",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "view": "password-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "new-asset-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "finding-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "new-template-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "new-site-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "new-inspection-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "new-member-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "inspection-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "template-dialog",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "view": "new-schedule-dialog",
+      "width": 390,
+      "overflow": false
+    }
+  ],
+  "qrDecoded": "https://pilot.example.com/#/asset/00000000-0000-4000-8000-000000000201",
+  "overflowFailures": []
+}

@@ -1,0 +1,22 @@
+test_command_exits_nonzero_on_bad_zip (test_tools.ReportTests.test_command_exits_nonzero_on_bad_zip) ... ok
+test_command_reports_validity_not_authenticity (test_tools.ReportTests.test_command_reports_validity_not_authenticity) ... ok
+test_duplicate_manifest_entries (test_tools.ReportTests.test_duplicate_manifest_entries) ... ok
+test_duplicate_zip_entries (test_tools.ReportTests.test_duplicate_zip_entries) ... ok
+test_manifest_cannot_checksum_itself (test_tools.ReportTests.test_manifest_cannot_checksum_itself) ... ok
+test_missing_declared_file (test_tools.ReportTests.test_missing_declared_file) ... ok
+test_tampered_bytes (test_tools.ReportTests.test_tampered_bytes) ... ok
+test_unlisted_entry (test_tools.ReportTests.test_unlisted_entry) ... ok
+test_unsafe_paths_rejected_without_extracting (test_tools.ReportTests.test_unsafe_paths_rejected_without_extracting) ... ok
+test_unsupported_algorithm (test_tools.ReportTests.test_unsupported_algorithm) ... ok
+test_valid_package (test_tools.ReportTests.test_valid_package) ... ok
+test_wrong_declared_size (test_tools.ReportTests.test_wrong_declared_size) ... ok
+test_configuration_permissions_are_private (test_tools.SetupTests.test_configuration_permissions_are_private) ... ok
+test_demo_has_distinct_secrets_without_console_disclosure (test_tools.SetupTests.test_demo_has_distinct_secrets_without_console_disclosure) ... ok
+test_existing_configuration_is_not_overwritten (test_tools.SetupTests.test_existing_configuration_is_not_overwritten) ... ok
+test_real_onboarding_does_not_enable_demo (test_tools.SetupTests.test_real_onboarding_does_not_enable_demo) ... ok
+test_unsafe_email_rejected_without_creating_configuration (test_tools.SetupTests.test_unsafe_email_rejected_without_creating_configuration) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 8.369s
+
+OK

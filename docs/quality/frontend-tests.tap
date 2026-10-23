@@ -1,0 +1,880 @@
+TAP version 13
+# Subtest: GET uses same-origin credentials and never enables preview
+ok 1 - GET uses same-origin credentials and never enables preview
+  ---
+  duration_ms: 20.149685
+  type: 'test'
+  ...
+# Subtest: mutation obtains and sends CSRF token in memory
+ok 2 - mutation obtains and sends CSRF token in memory
+  ---
+  duration_ms: 0.712191
+  type: 'test'
+  ...
+# Subtest: login refreshes CSRF after session fixation protection
+ok 3 - login refreshes CSRF after session fixation protection
+  ---
+  duration_ms: 0.759813
+  type: 'test'
+  ...
+# Subtest: 204 mutation has no JSON parse failure
+ok 4 - 204 mutation has no JSON parse failure
+  ---
+  duration_ms: 0.329525
+  type: 'test'
+  ...
+# Subtest: network failure is surfaced, never replaced with demo data
+ok 5 - network failure is surfaced, never replaced with demo data
+  ---
+  duration_ms: 0.829788
+  type: 'test'
+  ...
+# Subtest: HTTP problem code retained
+ok 6 - HTTP problem code retained
+  ---
+  duration_ms: 0.726543
+  type: 'test'
+  ...
+# Subtest: unauthenticated default maps to stable code
+ok 7 - unauthenticated default maps to stable code
+  ---
+  duration_ms: 0.631199
+  type: 'test'
+  ...
+# Subtest: multipart upload does not forge a content-type boundary
+ok 8 - multipart upload does not forge a content-type boundary
+  ---
+  duration_ms: 1.856081
+  type: 'test'
+  ...
+# Subtest: report downloads preserve binary response
+ok 9 - report downloads preserve binary response
+  ---
+  duration_ms: 1.103389
+  type: 'test'
+  ...
+# Subtest: check outcome PASS
+ok 10 - check outcome PASS
+  ---
+  duration_ms: 1.732815
+  type: 'test'
+  ...
+# Subtest: check outcome FAIL
+ok 11 - check outcome FAIL
+  ---
+  duration_ms: 0.091017
+  type: 'test'
+  ...
+# Subtest: check outcome NA
+ok 12 - check outcome NA
+  ---
+  duration_ms: 0.102965
+  type: 'test'
+  ...
+# Subtest: invalid checklist empty
+ok 13 - invalid checklist empty
+  ---
+  duration_ms: 0.370928
+  type: 'test'
+  ...
+# Subtest: invalid checklist FAIL
+ok 14 - invalid checklist FAIL
+  ---
+  duration_ms: 0.083105
+  type: 'test'
+  ...
+# Subtest: invalid checklist NA
+ok 15 - invalid checklist NA
+  ---
+  duration_ms: 0.062153
+  type: 'test'
+  ...
+# Subtest: invalid checklist true
+ok 16 - invalid checklist true
+  ---
+  duration_ms: 0.113651
+  type: 'test'
+  ...
+# Subtest: numeric boundaries 1
+ok 17 - numeric boundaries 1
+  ---
+  duration_ms: 0.149635
+  type: 'test'
+  ...
+# Subtest: numeric boundaries 10
+ok 18 - numeric boundaries 10
+  ---
+  duration_ms: 0.322985
+  type: 'test'
+  ...
+# Subtest: numeric boundaries 5.25
+ok 19 - numeric boundaries 5.25
+  ---
+  duration_ms: 0.269435
+  type: 'test'
+  ...
+# Subtest: numeric boundaries 0
+ok 20 - numeric boundaries 0
+  ---
+  duration_ms: 0.173941
+  type: 'test'
+  ...
+# Subtest: numeric boundaries 11
+ok 21 - numeric boundaries 11
+  ---
+  duration_ms: 0.064317
+  type: 'test'
+  ...
+# Subtest: numeric input rejects NaN
+ok 22 - numeric input rejects NaN
+  ---
+  duration_ms: 0.094833
+  type: 'test'
+  ...
+# Subtest: numeric input rejects Infinity
+ok 23 - numeric input rejects Infinity
+  ---
+  duration_ms: 0.049675
+  type: 'test'
+  ...
+# Subtest: numeric input rejects 0x10
+ok 24 - numeric input rejects 0x10
+  ---
+  duration_ms: 0.044537
+  type: 'test'
+  ...
+# Subtest: numeric input rejects 2,5
+ok 25 - numeric input rejects 2,5
+  ---
+  duration_ms: 0.214102
+  type: 'test'
+  ...
+# Subtest: numeric input rejects 1e999
+ok 26 - numeric input rejects 1e999
+  ---
+  duration_ms: 0.255855
+  type: 'test'
+  ...
+# Subtest: numeric input rejects 1000000000000
+ok 27 - numeric input rejects 1000000000000
+  ---
+  duration_ms: 0.077126
+  type: 'test'
+  ...
+# Subtest: optional unanswered check is NA
+ok 28 - optional unanswered check is NA
+  ---
+  duration_ms: 0.334247
+  type: 'test'
+  ...
+# Subtest: required text checked for content
+ok 29 - required text checked for content
+  ---
+  duration_ms: 0.201182
+  type: 'test'
+  ...
+# Subtest: answer length is bounded
+ok 30 - answer length is bounded
+  ---
+  duration_ms: 0.157387
+  type: 'test'
+  ...
+# Subtest: cadence 2026-10-01/2026-10-01
+ok 31 - cadence 2026-10-01/2026-10-01
+  ---
+  duration_ms: 0.543227
+  type: 'test'
+  ...
+# Subtest: cadence 2026-10-01/2026-10-31
+ok 32 - cadence 2026-10-01/2026-10-31
+  ---
+  duration_ms: 0.18583
+  type: 'test'
+  ...
+# Subtest: cadence 2026-10-01/2026-12-05
+ok 33 - cadence 2026-10-01/2026-12-05
+  ---
+  duration_ms: 0.901525
+  type: 'test'
+  ...
+# Subtest: cadence 2026-10-01/2026-09-15
+ok 34 - cadence 2026-10-01/2026-09-15
+  ---
+  duration_ms: 0.100481
+  type: 'test'
+  ...
+# Subtest: cadence 2028-02-28/2028-02-28
+ok 35 - cadence 2028-02-28/2028-02-28
+  ---
+  duration_ms: 0.114663
+  type: 'test'
+  ...
+# Subtest: cadence 2026-12-31/2026-12-31
+ok 36 - cadence 2026-12-31/2026-12-31
+  ---
+  duration_ms: 0.090215
+  type: 'test'
+  ...
+# Subtest: invalid interval 0
+ok 37 - invalid interval 0
+  ---
+  duration_ms: 0.138138
+  type: 'test'
+  ...
+# Subtest: invalid interval -1
+ok 38 - invalid interval -1
+  ---
+  duration_ms: 0.089966
+  type: 'test'
+  ...
+# Subtest: invalid interval 3651
+ok 39 - invalid interval 3651
+  ---
+  duration_ms: 0.08619
+  type: 'test'
+  ...
+# Subtest: invalid interval 1.5
+ok 40 - invalid interval 1.5
+  ---
+  duration_ms: 0.088423
+  type: 'test'
+  ...
+# Subtest: calendar day arithmetic is not DST duration arithmetic
+ok 41 - calendar day arithmetic is not DST duration arithmetic
+  ---
+  duration_ms: 0.181142
+  type: 'test'
+  ...
+# Subtest: optimistic version mismatch blocks mutation
+ok 42 - optimistic version mismatch blocks mutation
+  ---
+  duration_ms: 0.141563
+  type: 'test'
+  ...
+# Subtest: role matrix
+ok 43 - role matrix
+  ---
+  duration_ms: 0.185699
+  type: 'test'
+  ...
+# Subtest: HTML special characters escape without executing
+ok 44 - HTML special characters escape without executing
+  ---
+  duration_ms: 0.208954
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "=SUM(A1:A2)"
+ok 45 - CSV formula neutralization "=SUM(A1:A2)"
+  ---
+  duration_ms: 0.269475
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "+cmd"
+ok 46 - CSV formula neutralization "+cmd"
+  ---
+  duration_ms: 0.112579
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "-1+2"
+ok 47 - CSV formula neutralization "-1+2"
+  ---
+  duration_ms: 0.077386
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "@formula"
+ok 48 - CSV formula neutralization "@formula"
+  ---
+  duration_ms: 0.065849
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "  =1"
+ok 49 - CSV formula neutralization "  =1"
+  ---
+  duration_ms: 0.054071
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "\\t=2"
+ok 50 - CSV formula neutralization "\\t=2"
+  ---
+  duration_ms: 0.058888
+  type: 'test'
+  ...
+# Subtest: CSV formula neutralization "\\r=3"
+ok 51 - CSV formula neutralization "\\r=3"
+  ---
+  duration_ms: 0.051718
+  type: 'test'
+  ...
+# Subtest: CSV quotes and null
+ok 52 - CSV quotes and null
+  ---
+  duration_ms: 0.17324
+  type: 'test'
+  ...
+# Subtest: file signature image/png
+ok 53 - file signature image/png
+  ---
+  duration_ms: 0.214412
+  type: 'test'
+  ...
+# Subtest: file signature image/jpeg
+ok 54 - file signature image/jpeg
+  ---
+  duration_ms: 0.427653
+  type: 'test'
+  ...
+# Subtest: file signature application/pdf
+ok 55 - file signature application/pdf
+  ---
+  duration_ms: 0.080111
+  type: 'test'
+  ...
+# Subtest: file type is not trusted from extension
+ok 56 - file type is not trusted from extension
+  ---
+  duration_ms: 0.143446
+  type: 'test'
+  ...
+# Subtest: empty file rejected
+ok 57 - empty file rejected
+  ---
+  duration_ms: 0.114763
+  type: 'test'
+  ...
+# Subtest: oversize file rejected
+ok 58 - oversize file rejected
+  ---
+  duration_ms: 0.177527
+  type: 'test'
+  ...
+# Subtest: safe filenames remove path traversal
+ok 59 - safe filenames remove path traversal
+  ---
+  duration_ms: 0.236305
+  type: 'test'
+  ...
+# Subtest: SHA256 known vector
+ok 60 - SHA256 known vector
+  ---
+  duration_ms: 27.219974
+  type: 'test'
+  ...
+# Subtest: asset states derive from work rather than a certification label
+ok 61 - asset states derive from work rather than a certification label
+  ---
+  duration_ms: 2.507164
+  type: 'test'
+  ...
+# Subtest: search combines site, category, and text
+ok 62 - search combines site, category, and text
+  ---
+  duration_ms: 0.357167
+  type: 'test'
+  ...
+# Subtest: due queue sorts dates and restricts sites
+ok 63 - due queue sorts dates and restricts sites
+  ---
+  duration_ms: 9.607404
+  type: 'test'
+  ...
+# Subtest: avatar initials
+ok 64 - avatar initials
+  ---
+  duration_ms: 0.23296
+  type: 'test'
+  ...
+# Subtest: repair requires ownership and evidence
+ok 65 - repair requires ownership and evidence
+  ---
+  duration_ms: 0.446562
+  type: 'test'
+  ...
+# Subtest: independent repair verification
+ok 66 - independent repair verification
+  ---
+  duration_ms: 0.503557
+  type: 'test'
+  ...
+# Subtest: preview is explicitly marked and returns detached state
+ok 67 - preview is explicitly marked and returns detached state
+  ---
+  duration_ms: 13.399797
+  type: 'test'
+  ...
+# Subtest: site and asset creation record an audit trail
+ok 68 - site and asset creation record an audit trail
+  ---
+  duration_ms: 3.972884
+  type: 'test'
+  ...
+# Subtest: duplicate site code conflicts
+ok 69 - duplicate site code conflicts
+  ---
+  duration_ms: 2.230373
+  type: 'test'
+  ...
+# Subtest: unknown site cannot own an asset
+ok 70 - unknown site cannot own an asset
+  ---
+  duration_ms: 0.987314
+  type: 'test'
+  ...
+# Subtest: asset with open work cannot be archived
+ok 71 - asset with open work cannot be archived
+  ---
+  duration_ms: 2.305185
+  type: 'test'
+  ...
+# Subtest: unused asset can be archived
+ok 72 - unused asset can be archived
+  ---
+  duration_ms: 2.279437
+  type: 'test'
+  ...
+# Subtest: template draft must be reviewed before use
+ok 73 - template draft must be reviewed before use
+  ---
+  duration_ms: 5.74009
+  type: 'test'
+  ...
+# Subtest: idempotent start returns same record and rejects changed payload
+ok 74 - idempotent start returns same record and rejects changed payload
+  ---
+  duration_ms: 6.752052
+  type: 'test'
+  ...
+# Subtest: only original inspector may save draft
+ok 75 - only original inspector may save draft
+  ---
+  duration_ms: 4.658188
+  type: 'test'
+  ...
+# Subtest: draft save increments version and stale update fails
+ok 76 - draft save increments version and stale update fails
+  ---
+  duration_ms: 2.183493
+  type: 'test'
+  ...
+# Subtest: failed inspection creates a finding atomically
+ok 77 - failed inspection creates a finding atomically
+  ---
+  duration_ms: 2.495261
+  type: 'test'
+  ...
+# Subtest: incomplete submission rolls back without findings
+ok 78 - incomplete submission rolls back without findings
+  ---
+  duration_ms: 1.43006
+  type: 'test'
+  ...
+# Subtest: unknown and duplicated checklist items are rejected
+ok 79 - unknown and duplicated checklist items are rejected
+  ---
+  duration_ms: 1.695499
+  type: 'test'
+  ...
+# Subtest: submitted inspection is immutable
+ok 80 - submitted inspection is immutable
+  ---
+  duration_ms: 2.873079
+  type: 'test'
+  ...
+# Subtest: self-review rejected; independent review succeeds
+ok 81 - self-review rejected; independent review succeeds
+  ---
+  duration_ms: 3.29241
+  type: 'test'
+  ...
+# Subtest: schedule advances only on approval
+ok 82 - schedule advances only on approval
+  ---
+  duration_ms: 4.11054
+  type: 'test'
+  ...
+# Subtest: rejection retains record and does not advance schedule
+ok 83 - rejection retains record and does not advance schedule
+  ---
+  duration_ms: 5.969986
+  type: 'test'
+  ...
+# Subtest: running scheduled inspection prevents duplicate start and pause
+ok 84 - running scheduled inspection prevents duplicate start and pause
+  ---
+  duration_ms: 2.865549
+  type: 'test'
+  ...
+# Subtest: end-to-end repair flow requires evidence and independent verification
+ok 85 - end-to-end repair flow requires evidence and independent verification
+  ---
+  duration_ms: 4.913437
+  type: 'test'
+  ...
+# Subtest: repair rejection returns to in progress
+ok 86 - repair rejection returns to in progress
+  ---
+  duration_ms: 1.358492
+  type: 'test'
+  ...
+# Subtest: unassigned repair cannot be started by another user
+ok 87 - unassigned repair cannot be started by another user
+  ---
+  duration_ms: 2.749994
+  type: 'test'
+  ...
+# Subtest: VIEWER cannot manage catalog or team
+ok 88 - VIEWER cannot manage catalog or team
+  ---
+  duration_ms: 0.951701
+  type: 'test'
+  ...
+# Subtest: TECHNICIAN cannot manage catalog or team
+ok 89 - TECHNICIAN cannot manage catalog or team
+  ---
+  duration_ms: 0.793864
+  type: 'test'
+  ...
+# Subtest: INSPECTOR cannot manage catalog or team
+ok 90 - INSPECTOR cannot manage catalog or team
+  ---
+  duration_ms: 0.809707
+  type: 'test'
+  ...
+# Subtest: VIEWER cannot start inspections
+ok 91 - VIEWER cannot start inspections
+  ---
+  duration_ms: 1.558102
+  type: 'test'
+  ...
+# Subtest: TECHNICIAN cannot start inspections
+ok 92 - TECHNICIAN cannot start inspections
+  ---
+  duration_ms: 0.892582
+  type: 'test'
+  ...
+# Subtest: administrator cannot disable self
+ok 93 - administrator cannot disable self
+  ---
+  duration_ms: 1.470531
+  type: 'test'
+  ...
+# Subtest: member disable removes login access in preview
+ok 94 - member disable removes login access in preview
+  ---
+  duration_ms: 1.214697
+  type: 'test'
+  ...
+# Subtest: weak member password rejected
+ok 95 - weak member password rejected
+  ---
+  duration_ms: 0.736447
+  type: 'test'
+  ...
+# Subtest: evidence content and size bounded
+ok 96 - evidence content and size bounded
+  ---
+  duration_ms: 1.876822
+  type: 'test'
+  ...
+# Subtest: report ZIP has verifiable manifest and original evidence
+ok 97 - report ZIP has verifiable manifest and original evidence
+  ---
+  duration_ms: 9.108715
+  type: 'test'
+  ...
+# Subtest: technician cannot export complete customer report
+ok 98 - technician cannot export complete customer report
+  ---
+  duration_ms: 0.776488
+  type: 'test'
+  ...
+# Subtest: passport returns only chosen asset records
+ok 99 - passport returns only chosen asset records
+  ---
+  duration_ms: 0.785902
+  type: 'test'
+  ...
+# Subtest: reset restores seed and does not mutate original fixture
+ok 100 - reset restores seed and does not mutate original fixture
+  ---
+  duration_ms: 1.068516
+  type: 'test'
+  ...
+# Subtest: English/German dictionary key parity
+ok 101 - English/German dictionary key parity
+  ---
+  duration_ms: 1.817433
+  type: 'test'
+  ...
+# Subtest: interpolation and fallback are deterministic
+ok 102 - interpolation and fallback are deterministic
+  ---
+  duration_ms: 0.326431
+  type: 'test'
+  ...
+# Subtest: localized dates do not shift date-only deadlines
+ok 103 - localized dates do not shift date-only deadlines
+  ---
+  duration_ms: 14.688834
+  type: 'test'
+  ...
+# Subtest: render overview/en
+ok 104 - render overview/en
+  ---
+  duration_ms: 4.859656
+  type: 'test'
+  ...
+# Subtest: render assets/en
+ok 105 - render assets/en
+  ---
+  duration_ms: 1.873907
+  type: 'test'
+  ...
+# Subtest: render inspections/en
+ok 106 - render inspections/en
+  ---
+  duration_ms: 1.76219
+  type: 'test'
+  ...
+# Subtest: render schedules/en
+ok 107 - render schedules/en
+  ---
+  duration_ms: 1.62947
+  type: 'test'
+  ...
+# Subtest: render actions/en
+ok 108 - render actions/en
+  ---
+  duration_ms: 0.546833
+  type: 'test'
+  ...
+# Subtest: render reports/en
+ok 109 - render reports/en
+  ---
+  duration_ms: 0.648395
+  type: 'test'
+  ...
+# Subtest: render templates/en
+ok 110 - render templates/en
+  ---
+  duration_ms: 0.646883
+  type: 'test'
+  ...
+# Subtest: render team/en
+ok 111 - render team/en
+  ---
+  duration_ms: 0.300061
+  type: 'test'
+  ...
+# Subtest: render audit/en
+ok 112 - render audit/en
+  ---
+  duration_ms: 0.633162
+  type: 'test'
+  ...
+# Subtest: render help/en
+ok 113 - render help/en
+  ---
+  duration_ms: 0.243306
+  type: 'test'
+  ...
+# Subtest: render overview/de
+ok 114 - render overview/de
+  ---
+  duration_ms: 2.031335
+  type: 'test'
+  ...
+# Subtest: render assets/de
+ok 115 - render assets/de
+  ---
+  duration_ms: 1.182888
+  type: 'test'
+  ...
+# Subtest: render inspections/de
+ok 116 - render inspections/de
+  ---
+  duration_ms: 0.708545
+  type: 'test'
+  ...
+# Subtest: render schedules/de
+ok 117 - render schedules/de
+  ---
+  duration_ms: 1.119142
+  type: 'test'
+  ...
+# Subtest: render actions/de
+ok 118 - render actions/de
+  ---
+  duration_ms: 0.530337
+  type: 'test'
+  ...
+# Subtest: render reports/de
+ok 119 - render reports/de
+  ---
+  duration_ms: 0.475144
+  type: 'test'
+  ...
+# Subtest: render templates/de
+ok 120 - render templates/de
+  ---
+  duration_ms: 0.223887
+  type: 'test'
+  ...
+# Subtest: render team/de
+ok 121 - render team/de
+  ---
+  duration_ms: 0.176606
+  type: 'test'
+  ...
+# Subtest: render audit/de
+ok 122 - render audit/de
+  ---
+  duration_ms: 0.419922
+  type: 'test'
+  ...
+# Subtest: render help/de
+ok 123 - render help/de
+  ---
+  duration_ms: 0.132239
+  type: 'test'
+  ...
+# Subtest: login has named accessible fields and explicit preview link
+ok 124 - login has named accessible fields and explicit preview link
+  ---
+  duration_ms: 0.174081
+  type: 'test'
+  ...
+# Subtest: dialog new-site
+ok 125 - dialog new-site
+  ---
+  duration_ms: 0.853703
+  type: 'test'
+  ...
+# Subtest: dialog new-asset
+ok 126 - dialog new-asset
+  ---
+  duration_ms: 0.165589
+  type: 'test'
+  ...
+# Subtest: dialog new-template
+ok 127 - dialog new-template
+  ---
+  duration_ms: 0.286801
+  type: 'test'
+  ...
+# Subtest: dialog new-schedule
+ok 128 - dialog new-schedule
+  ---
+  duration_ms: 0.095264
+  type: 'test'
+  ...
+# Subtest: dialog new-inspection
+ok 129 - dialog new-inspection
+  ---
+  duration_ms: 0.069705
+  type: 'test'
+  ...
+# Subtest: dialog new-member
+ok 130 - dialog new-member
+  ---
+  duration_ms: 0.135114
+  type: 'test'
+  ...
+# Subtest: dialog inspection
+ok 131 - dialog inspection
+  ---
+  duration_ms: 0.514434
+  type: 'test'
+  ...
+# Subtest: dialog finding
+ok 132 - dialog finding
+  ---
+  duration_ms: 0.278278
+  type: 'test'
+  ...
+# Subtest: dialog template
+ok 133 - dialog template
+  ---
+  duration_ms: 0.146731
+  type: 'test'
+  ...
+# Subtest: dialog password
+ok 134 - dialog password
+  ---
+  duration_ms: 0.069425
+  type: 'test'
+  ...
+# Subtest: dialog scan
+ok 135 - dialog scan
+  ---
+  duration_ms: 0.067602
+  type: 'test'
+  ...
+# Subtest: dialog command
+ok 136 - dialog command
+  ---
+  duration_ms: 0.047542
+  type: 'test'
+  ...
+# Subtest: user-controlled names escape in every rendered view
+ok 137 - user-controlled names escape in every rendered view
+  ---
+  duration_ms: 1.340776
+  type: 'test'
+  ...
+# Subtest: UI helpers escape values and labels
+ok 138 - UI helpers escape values and labels
+  ---
+  duration_ms: 0.123325
+  type: 'test'
+  ...
+# Subtest: icons and asset art are local SVG
+ok 139 - icons and asset art are local SVG
+  ---
+  duration_ms: 0.07999
+  type: 'test'
+  ...
+# Subtest: QR version 5 matrix and finder geometry
+ok 140 - QR version 5 matrix and finder geometry
+  ---
+  duration_ms: 15.637551
+  type: 'test'
+  ...
+# Subtest: QR byte capacity including UTF8
+ok 141 - QR byte capacity including UTF8
+  ---
+  duration_ms: 6.564729
+  type: 'test'
+  ...
+# Subtest: QR title escaped and quiet zone present
+ok 142 - QR title escaped and quiet zone present
+  ---
+  duration_ms: 6.723088
+  type: 'test'
+  ...
+# Subtest: CRC32 standard check vector
+ok 143 - CRC32 standard check vector
+  ---
+  duration_ms: 0.147502
+  type: 'test'
+  ...
+# Subtest: ZIP retains UTF8 filenames and exact bytes
+ok 144 - ZIP retains UTF8 filenames and exact bytes
+  ---
+  duration_ms: 0.668084
+  type: 'test'
+  ...
+# Subtest: ZIP rejects path traversal
+ok 145 - ZIP rejects path traversal
+  ---
+  duration_ms: 0.112649
+  type: 'test'
+  ...
+1..145
+# tests 145
+# suites 0
+# pass 145
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 266.248036

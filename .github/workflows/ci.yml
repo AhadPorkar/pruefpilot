@@ -1,0 +1,103 @@
+name: Verify release candidate
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '26.12.1'
+          package-manager-cache: false
+      # Network-free authoring could not create a trustworthy transitive lockfile.
+      # Commit the generated lockfile after review, then replace with npm ci.
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Operator tool tests
+        working-directory: .
+        run: python3 -m unittest discover -s scripts/tests -v
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: frontend-verification
+          path: |
+            frontend/playwright-report/
+            frontend/test-results/
+            frontend/package-lock.json
+          retention-days: 14
+  backend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:18.6-bookworm
+        env:
+          POSTGRES_DB: pruefpilot_test
+          POSTGRES_USER: pruefpilot_test
+          POSTGRES_PASSWORD: integration-only-not-production
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U pruefpilot_test -d pruefpilot_test"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: jdbc:postgresql://localhost:5432/pruefpilot_test
+      DATABASE_USER: pruefpilot_test
+      DATABASE_PASSWORD: integration-only-not-production
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v6.1.0
+        with:
+          distribution: temurin
+          java-version: '27'
+          cache: maven
+      - name: Unit and actual PostgreSQL/HTTP integration tests
+        run: mvn -B -ntp -f backend/pom.xml verify
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: backend-verification
+          path: |
+            backend/target/surefire-reports/
+            backend/target/failsafe-reports/
+          retention-days: 14
+  container:
+    needs: [frontend, backend]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - run: python3 scripts/setup.py --demo
+      - run: docker compose up --build --wait --wait-timeout 180
+      - run: curl --fail http://localhost:8080/actuator/health
+      - run: curl --fail http://localhost:8080/ | grep 'pruef-pilot'
+      - if: always()
+        run: docker compose logs --no-color > container.log
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: container-log
+          path: container.log
+      - if: always()
+        run: docker compose down -v

@@ -1,0 +1,12 @@
+{
+  "method": "Actual offline documentation HTML mounted in isolated Chromium, no URL navigation",
+  "checks": [
+    "English default",
+    "German language selection",
+    "No page overflow at 390px",
+    "No page overflow at 768px",
+    "No page overflow at 1440px",
+    "No uncaught documentation script errors"
+  ],
+  "errors": []
+}

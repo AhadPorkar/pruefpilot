@@ -1,0 +1,55 @@
+name: pruefpilot
+services:
+  db:
+    image: postgres:18.6-bookworm
+    environment:
+      POSTGRES_DB: pruefpilot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:?Run python scripts/setup.py first}
+      MIGRATION_PASSWORD: ${MIGRATION_PASSWORD:?Generate credentials first}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:?Generate credentials first}
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./infra/init-db.sh:/docker-entrypoint-initdb.d/10-pruefpilot.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U postgres -d pruefpilot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+    shm_size: 128mb
+    security_opt: [no-new-privileges:true]
+  app:
+    build: .
+    image: pruefpilot:1.0.0-rc.1
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${APP_PORT:-8080}:8080"
+    environment:
+      DATABASE_URL: jdbc:postgresql://db:5432/pruefpilot
+      DATABASE_USER: pruefpilot_app
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:?Generate credentials first}
+      MIGRATION_USER: pruefpilot_owner
+      MIGRATION_PASSWORD: ${MIGRATION_PASSWORD:?Generate credentials first}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-owner@example.test}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Generate credentials first}
+      ORGANIZATION_NAME: ${ORGANIZATION_NAME:-PruefPilot Workspace}
+      ORGANIZATION_TIMEZONE: ${ORGANIZATION_TIMEZONE:-Europe/Berlin}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:8080}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      PRODUCTION: ${PRODUCTION:-false}
+      DEMO_DATA: ${DEMO_DATA:-false}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-}
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1024m
+    pids_limit: 200
+    stop_grace_period: 30s
+    restart: unless-stopped
+volumes:
+  postgres_data:

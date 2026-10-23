@@ -1,0 +1,28 @@
+{
+  "method": "Isolated Chromium DOM component harness using actual TypeScript app/controller/views and in-memory preview. about:blank mounting forced preview adapter and supplied test-only crypto primitives because managed browser navigation is blocked. Not a live HTTP/authentication E2E test.",
+  "checks": [
+    "custom element mounts with explicit preview adapter",
+    "English initial language",
+    "German toggle event",
+    "dark theme event",
+    "route event assets",
+    "route event inspections",
+    "route event schedules",
+    "route event actions",
+    "route event reports",
+    "route event templates",
+    "route event team",
+    "route event audit",
+    "route event help",
+    "asset passport and real QR modal",
+    "assigned technician repair form",
+    "evidence upload preserves unsaved repair note",
+    "repair submission transitions state",
+    "independent supervisor closes finding",
+    "viewer management action absent",
+    "site creation form and refresh",
+    "mobile navigation event",
+    "no uncaught component errors"
+  ],
+  "errors": []
+}

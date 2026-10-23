@@ -1,0 +1,62 @@
+PASS pass check
+PASS reject noteRequired
+PASS explained FAIL
+PASS reject noteRequired
+PASS explained NA
+PASS reject answerRequired
+PASS reject validation
+PASS optional blank
+PASS numeric 2
+PASS numeric 8
+PASS numeric 5.123456
+PASS range failure
+PASS reject invalidNumber
+PASS reject invalidNumber
+PASS reject invalidNumber
+PASS reject invalidNumber
+PASS reject invalidNumber
+PASS reject independentReview
+PASS independent reviewer accepted
+PASS reject conflict
+PASS reject invalidTransition
+PASS reject invalidInterval
+PASS reject invalidInterval
+PASS reject invalidInterval
+PASS reject scheduleReason
+PASS anchored overdue cadence
+PASS leap day
+PASS reject evidenceRequired
+PASS reject repairRequired
+PASS reject invalidTransition
+PASS repair completed
+PASS reject independentReview
+PASS independent closure
+PASS PDF signature
+PASS PNG signature
+PASS JPEG signature
+PASS reject fileType
+PASS reject fileSize
+PASS reject fileSize
+PASS path traversal removed
+PASS SHA-256 known vector
+PASS HTML escaped
+PASS CSV neutralized =SUM(A1)
+PASS CSV neutralized +1
+PASS CSV neutralized -1
+PASS CSV neutralized @cmd
+PASS CSV neutralized 	=2
+PASS login allowance 0
+PASS login allowance 1
+PASS login allowance 2
+PASS login allowance 3
+PASS login allowance 4
+PASS login allowance 5
+PASS login allowance 6
+PASS login allowance 7
+PASS login allowance 8
+PASS login allowance 9
+PASS login allowance 10
+PASS login allowance 11
+PASS login limit
+PASS separate address
+RESULT: 61 checks passed; production domain sources; no Spring/PostgreSQL execution.
