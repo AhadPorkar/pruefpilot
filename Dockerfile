@@ -6,7 +6,7 @@ RUN npm install --no-audit --no-fund
 COPY frontend/ ./
 RUN npm run build && npm test
 
-FROM maven:3.10.0-eclipse-temurin-27 AS java
+FROM maven:3-eclipse-temurin-26 AS java
 WORKDIR /src/backend
 COPY backend/pom.xml ./
 RUN mvn -B -ntp dependency:go-offline
