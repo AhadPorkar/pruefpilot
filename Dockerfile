@@ -1,5 +1,5 @@
 # Release baseline verified 2026-10-23. Pin image digests after the first verified release build.
-FROM node:26.12.1-bookworm-slim AS web
+FROM node:26.13.0-bookworm-slim AS web
 WORKDIR /src/frontend
 COPY frontend/package.json ./
 RUN npm install --no-audit --no-fund
